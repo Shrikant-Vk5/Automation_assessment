@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-01-16T20:56:04 IST" name="Default Suite" finished-at="2022-01-16T20:56:52 IST" duration-ms="48330">
+    <groups>
+    </groups>
+    <test started-at="2022-01-16T20:56:04 IST" name="AssesQA" finished-at="2022-01-16T20:56:52 IST" duration-ms="48330">
+      <class name="testClasses.CheckoutTests">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:testClasses.CheckoutTests@34129c78]" started-at="2022-01-16T20:56:04 IST" name="openBrowser" finished-at="2022-01-16T20:56:37 IST" duration-ms="32839" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="initImpl()[pri:0, instance:testClasses.CheckoutTests@34129c78]" started-at="2022-01-16T20:56:37 IST" name="initImpl" finished-at="2022-01-16T20:56:37 IST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initImpl -->
+        <test-method signature="test_case_3()[pri:0, instance:testClasses.CheckoutTests@34129c78]" started-at="2022-01-16T20:56:37 IST" name="test_case_3" finished-at="2022-01-16T20:56:52 IST" depends-on-methods="testClasses.CheckoutTests.initImpl" duration-ms="15300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_case_3 -->
+        <test-method is-config="true" signature="close()[pri:0, instance:testClasses.CheckoutTests@34129c78]" started-at="2022-01-16T20:56:52 IST" name="close" finished-at="2022-01-16T20:56:52 IST" duration-ms="123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- testClasses.CheckoutTests -->
+    </test> <!-- AssesQA -->
+  </suite> <!-- Default Suite -->
+</testng-results>
