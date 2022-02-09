@@ -1,12 +1,8 @@
-package Automation.actions;
+package Automation.pageFunctions;
 
-import Automation.clickItem.ContactPage;
-import Automation.clickItem.HomePage;
+import Automation.pageObj.ContactPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
 
 public class ContactUsImpl extends CoreActions{
 

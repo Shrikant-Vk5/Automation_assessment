@@ -5,19 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-public class CoreTestIntegration {
+public class CoreTestSauceDemo {
 
     protected WebDriver bot;
-    protected static final String URL = "http://automationpractice.com";
+
+    protected static final String URL = "https://www.saucedemo.com/";
+
 
     @BeforeClass
     public void openBrowser() {
         bot = new BotDriver().getBot();
         bot.get(URL);
-    }
-
-    public String getUrl(){
-        return URL;
     }
 
     protected static void logStep(String step) {
