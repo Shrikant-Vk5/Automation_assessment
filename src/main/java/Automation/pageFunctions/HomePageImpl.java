@@ -1,6 +1,6 @@
-package Automation.actions;
+package Automation.pageFunctions;
 
-import Automation.clickItem.HomePage;
+import Automation.pageObj.HomePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 

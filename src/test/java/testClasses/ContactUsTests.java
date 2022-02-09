@@ -1,13 +1,13 @@
 package testClasses;
 
-import Automation.actions.ContactUsImpl;
-import core.CoreTestIntegration;
-import Automation.actions.HomePageImpl;
+import Automation.pageFunctions.ContactUsImpl;
+import core.CoreTest;
+import Automation.pageFunctions.HomePageImpl;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ContactUsTests extends CoreTestIntegration {
+public class ContactUsTests extends CoreTest {
 
     HomePageImpl home;
     ContactUsImpl cont;
@@ -21,7 +21,7 @@ public class ContactUsTests extends CoreTestIntegration {
 
     @Test(dependsOnMethods = "initImpl")
     @Description("test that the user can launch site and enter valid credential")
-    public void test_case_1() {
+    public void test_enter_valid_credentials() {
         logStep("Site is opened");
         logStep("clicked contact us");
         home.clickContact();
@@ -42,7 +42,7 @@ public class ContactUsTests extends CoreTestIntegration {
 
     @Test(dependsOnMethods = "initImpl")
     @Description("test that the user can launch site and enter invalid credential")
-    public void test_case_2() {
+    public void test_enter_invalid_credentials() {
         logStep("Site is opened");
         logStep("clicked contact us");
         home.clickContact();

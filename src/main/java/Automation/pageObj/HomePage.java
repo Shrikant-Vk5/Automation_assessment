@@ -1,4 +1,4 @@
-package Automation.clickItem;
+package Automation.pageObj;
 
 import org.openqa.selenium.By;
 

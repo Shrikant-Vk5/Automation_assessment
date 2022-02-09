@@ -1,14 +1,13 @@
-package Automation.actions;
+package Automation.pageFunctions;
 
-import Automation.clickItem.CheckoutPage;
-import Automation.clickItem.ContactPage;
+import Automation.pageObj.CheckoutPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 public class CheckoutImpl extends CoreActions{
 
-    protected String productName="";
-    protected String productPrice="";
+    protected String productName;
+    protected String productPrice;
 
     public CheckoutImpl(WebDriver bot) {
         super(bot);

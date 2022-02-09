@@ -1,13 +1,13 @@
 package testClasses;
 
-import Automation.actions.CheckoutImpl;
-import core.CoreTestIntegration;
-import Automation.actions.HomePageImpl;
+import Automation.pageFunctions.CheckoutImpl;
+import core.CoreTest;
+import Automation.pageFunctions.HomePageImpl;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CheckoutTests extends CoreTestIntegration {
+public class CheckoutTests extends CoreTest {
 
     HomePageImpl home;
     CheckoutImpl check;
@@ -20,8 +20,8 @@ public class CheckoutTests extends CoreTestIntegration {
     }
 
     @Test(dependsOnMethods = "initImpl")
-    @Description("test that the user can launch site and enter valid credential")
-    public void test_case_3() {
+    @Description("test that the user can launch site, choose product and checkout product")
+    public void test_checkout_product() {
         logStep("Site is opened");
         logStep("clicked women section");
         home.hoverWomenTab();
