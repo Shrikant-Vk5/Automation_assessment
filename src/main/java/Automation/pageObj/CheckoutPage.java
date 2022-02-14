@@ -4,11 +4,10 @@ import org.openqa.selenium.By;
 
 public class CheckoutPage {
 
-    public static final By PRODUCT_PRICE = By.className("product-price");
-    public static final By ADD_IN_CART = By.xpath("//a[@title='Add to cart']");
-    public static final By PROCEED_CHECKOUT = By.xpath("//a[@title='Proceed to checkout']");
-    public static final By FIRST_PRODUCT = By.cssSelector("ul.product_list > li");
-    public static final By PRODUCT_NAME = By.cssSelector(".product-container h5 a.product-name");
-    public static final By FINAL_PRODUCT_NAME = By.cssSelector("#cart_summary p.product-name a");
-    public static final By FINAL_PRODUCT_PRICE = By.id("total_product");
+    public static final By FIRSTNAME = By.id("first-name");
+    public static final By LASTNAME = By.id("last-name");
+    public static final By POSTAL_CODE = By.id("postal-code");
+    public static final By CONTINUE = By.id("continue");
+    public static final By FINISH = By.id("finish");
+
 }

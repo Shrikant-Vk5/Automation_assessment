@@ -6,41 +6,23 @@ import org.openqa.selenium.WebDriver;
 
 public class CheckoutImpl extends CoreActions{
 
-    protected String productName;
-    protected String productPrice;
-
     public CheckoutImpl(WebDriver bot) {
         super(bot);
     }
 
-    @Step("Adding first Product")
-    public void clickAddFirstDress() {
-        waitForVisibility(CheckoutPage.ADD_IN_CART);
-        hoverOver(CheckoutPage.FIRST_PRODUCT);
-        click(CheckoutPage.ADD_IN_CART);
-        productName=readText(CheckoutPage.PRODUCT_NAME);
-        productPrice=readText(CheckoutPage.PRODUCT_PRICE);
+    @Step("Fill the user inputs for checkout")
+    public void fillInput() {
+        sleep(1);
+        enterText(CheckoutPage.FIRSTNAME,"John");
+        enterText(CheckoutPage.LASTNAME,"Doe");
+        enterText(CheckoutPage.POSTAL_CODE,"201202");
     }
 
-    @Step("Proceeding to cart")
-    public void clickToCart() {
-        waitForVisibility(CheckoutPage.PROCEED_CHECKOUT);
-        click(CheckoutPage.PROCEED_CHECKOUT);
+    @Step("Click continue and finish the checkout.")
+    public void clickContinueAndFinishCheckout() {
+        sleep(1);
+        click(CheckoutPage.CONTINUE);
+        click(CheckoutPage.FINISH);
     }
 
-    @Step("Verify Dress is same as added")
-    public boolean verifyDressAdded() {
-//        System.out.println(productName+"--"+readText(CheckoutPage.FINAL_PRODUCT_NAME));
-        if(productName.equalsIgnoreCase(readText(CheckoutPage.FINAL_PRODUCT_NAME)))
-            return true;
-        return false;
-    }
-
-    @Step("Verify final Price is same as chosen product")
-    public boolean verifyCartPrice() {
-//        System.out.println(productPrice+"--"+readText(CheckoutPage.FINAL_PRODUCT_PRICE));
-        if(productPrice.equalsIgnoreCase(readText(CheckoutPage.FINAL_PRODUCT_PRICE)))
-            return true;
-        return false;
-    }
 }
