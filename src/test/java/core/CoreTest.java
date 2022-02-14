@@ -9,7 +9,7 @@ public class CoreTest {
 
     protected WebDriver bot;
 
-    protected static final String URL = "http://automationpractice.com/";
+    protected static final String URL = "https://www.saucedemo.com/";
 
 
     @BeforeClass

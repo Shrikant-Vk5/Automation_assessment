@@ -1,8 +1,11 @@
 package Automation.pageFunctions;
 
 import Automation.pageObj.HomePage;
+import Automation.pageObj.HomePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
+
+import java.util.List;
 
 public class HomePageImpl extends CoreActions {
 
@@ -10,25 +13,27 @@ public class HomePageImpl extends CoreActions {
         super(bot);
     }
 
-    @Step("click on contact us")
-    public void clickContact() {
-        waitForVisibility(HomePage.CONTACT_US);
-        click(HomePage.CONTACT_US);
-    }
+    @Step("Try filling different given login credentials")
+    public void fillDomLogin() {
+        List<String> usern=getListItems(HomePage.DOM_USERNAME);
+        List<String> passw=getListItems(HomePage.DOM_PASSWORD);
+        for(int i=0;i<usern.size();i++){
+            for(int j=0;j<passw.size();j++){
+                enterText(HomePage.INPUT_USERNAME,usern.get(i));
+                enterText(HomePage.INPUT_PASSWORD,passw.get(j));
 
-    public void hoverWomenTab() {
-        waitForVisibility(HomePage.WOMEN_TAB);
-        hoverOver(HomePage.WOMEN_TAB);
-    }
-
-    public void clickCasualDresses() {
-        sleep(1);
-        waitForVisibility(HomePage.CASUAL_SN);
-        click(HomePage.CASUAL_SN);
-    }
-    @Step("check if the user has arrived on the correct url page")
-    public boolean hasArrivedOnPage(String url) {
-        return bot.getCurrentUrl().contains(url);
+                click(HomePage.LOGIN_BUTTON);
+                if(isVisible(HomePage.LOGIN_BUTTON)){
+                    if(!waitForVisibility(HomePage.ERROR_DIALOG)){
+                        System.out.println("Username "+usern.get(i)+"\t"+"Password "+passw.get(j));
+                        break;
+                    }
+                }
+            }
+            if(!isVisible(HomePage.LOGIN_BUTTON)){
+                break;
+            }
+        }
     }
 
 }
