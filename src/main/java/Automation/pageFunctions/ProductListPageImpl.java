@@ -1,8 +1,6 @@
 package Automation.pageFunctions;
 
-import Automation.pageObj.CartPage;
 import Automation.pageObj.ProductListPage;
-import Automation.pageObj.SaucedemoPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
