@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +104,17 @@
                     <div class="method-list-content passed suite-Default_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="testClasses.SaucedemoTests" class="method navigator-link" hash-for-method="initImpl">initImpl</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_Suite" title="testClasses.ContactUsTests" class="method navigator-link" hash-for-method="initImpl">initImpl</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="testClasses.SaucedemoTests" class="method navigator-link" hash-for-method="test_saucedemo_product_checkout">test_saucedemo_product_checkout</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_Suite" title="testClasses.ContactUsTests" class="method navigator-link" hash-for-method="test_enter_invalid_credentials">test_enter_invalid_credentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="testClasses.ContactUsTests" class="method navigator-link" hash-for-method="test_enter_valid_credentials">test_enter_valid_credentials</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_Suite -->
@@ -127,7 +132,7 @@
           <div class="suite-Default_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testClasses.SaucedemoTests</span>
+              <span class="class-name">testClasses.ContactUsTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -139,9 +144,16 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="test_saucedemo_product_checkout">
-                  </a> <!-- test_saucedemo_product_checkout -->
-                  <span class="method-name">test_saucedemo_product_checkout</span>
+                  <a name="test_enter_invalid_credentials">
+                  </a> <!-- test_enter_invalid_credentials -->
+                  <span class="method-name">test_enter_invalid_credentials</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test_enter_valid_credentials">
+                  </a> <!-- test_enter_valid_credentials -->
+                  <span class="method-name">test_enter_valid_credentials</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -158,7 +170,7 @@
 &lt;suite name=&quot;Default Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;AssesQA&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testClasses.SaucedemoTests&quot;/&gt;
+      &lt;class name=&quot;testClasses.ContactUsTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- AssesQA --&gt;
 &lt;/suite&gt; &lt;!-- Default Suite --&gt;
@@ -198,20 +210,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'test_saucedemo_product_checkout')
-data.setCell(0, 2, 'testClasses.SaucedemoTests')
-data.setCell(0, 3, 6999);
+data.setCell(0, 1, 'test_enter_valid_credentials')
+data.setCell(0, 2, 'testClasses.ContactUsTests')
+data.setCell(0, 3, 19517);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'initImpl')
-data.setCell(1, 2, 'testClasses.SaucedemoTests')
-data.setCell(1, 3, 28);
+data.setCell(1, 1, 'test_enter_invalid_credentials')
+data.setCell(1, 2, 'testClasses.ContactUsTests')
+data.setCell(1, 3, 5102);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'initImpl')
+data.setCell(2, 2, 'testClasses.ContactUsTests')
+data.setCell(2, 3, 28);
 window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 24 seconds</span>
               <div id="times-div-Default_Suite">
               </div> <!-- times-div-Default_Suite -->
             </div> <!-- times-div -->
@@ -237,22 +253,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testClasses.SaucedemoTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testClasses.ContactUsTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">openBrowser</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">initImpl</span>
-                <span class="method-start">2575 ms</span>
+                <span class="method-start">9558 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">test_saucedemo_product_checkout</span>
-                <span class="method-start">2639 ms</span>
+                <span class="method-name">test_enter_invalid_credentials</span>
+                <span class="method-start">9613 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">test_enter_valid_credentials</span>
+                <span class="method-start">14716 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">close</span>
-                <span class="method-start">9640 ms</span>
+                <span class="method-start">34234 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

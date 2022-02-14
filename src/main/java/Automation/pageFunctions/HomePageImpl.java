@@ -16,11 +16,13 @@ public class HomePageImpl extends CoreActions {
         click(HomePage.CONTACT_US);
     }
 
+    @Step("hover on women tab")
     public void hoverWomenTab() {
         waitForVisibility(HomePage.WOMEN_TAB);
         hoverOver(HomePage.WOMEN_TAB);
     }
 
+    @Step("click on casual dresses")
     public void clickCasualDresses() {
         sleep(1);
         waitForVisibility(HomePage.CASUAL_SN);
